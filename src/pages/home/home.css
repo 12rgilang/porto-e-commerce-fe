@@ -1,0 +1,129 @@
+.wavy-text {
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow:
+    2px 2px 0 rgba(255, 0, 0, 0.5),
+    4px 4px 0 rgba(0, 255, 0, 0.5),
+    6px 6px 0 rgba(0, 0, 255, 0.5),
+    8px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+@keyframes wavy {
+  from {
+    text-shadow:
+      2px 2px 0 #0295A9,
+      4px 4px 0 #12ADC1,
+      6px 6px 0 #FDD037,
+      8px 8px 0 #000;
+  }
+  to {
+    text-shadow:
+      -2px -2px 0 #0295A9,
+      -4px -4px 0 #12ADC1,
+      -6px -6px 0 #FDD037,
+      -8px -8px 0 #000;
+  }
+}
+
+.wavy-text {
+  font-size: 36px;
+  font-weight: bold;
+  animation: wavy 2s infinite alternate;
+}
+
+.btn > button a:hover,
+.btn > button a:focus,
+.btn > button a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+/* animations Card */
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@-webkit-keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+}
+.hvr-bob {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
+/* footer */
+.instagram > a{
+  color: #8a3ab9
+}
+
+.linkedin > a{
+  color: #0077b5;
+}
+
+.facebook > a {
+  color: #3b5998;
+}
+
+.twitter > a {
+  color: #00acee ;
+}

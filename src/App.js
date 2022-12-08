@@ -131,7 +131,7 @@ let onLogout = async() => {
         <Route path='/menu' element={<Menu />} />
         <Route path='/product/:id' element={<DetailProduct />} />
         <Route path='/cart' element={<Cart />} /> 
-        {/* <Route path='/*' element={<NotFound />} /> */}
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </>
   )

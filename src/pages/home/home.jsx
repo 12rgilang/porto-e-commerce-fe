@@ -1,7 +1,9 @@
 import { MdNoFood } from "react-icons/md";
 import { BsCaretDown, BsInstagram, BsGithub, BsLinkedin, BsFacebook, BsTwitter } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import './../home/home.css'
 // import { RxInstagramLogo } from "react-icons/rx";
+
 
 let Home = () => {
   let img = [
@@ -19,14 +21,14 @@ let Home = () => {
     { name : "github", "url": "https://github.com/12rgilang"},
     { name: "twitter", "url": "https://twitter.com/G_R12/status/1574050538693758976"},
   ]
-    
+
   ;
   return (
     <>
       <div className="parent flex">
           {/* left section */}
-        <div className="left h-screen sticky bottom-0 top-0 flex basis-2/5 justify-center items-center">
-          <div className="child flex my-fs-30 font-bold">
+        <div className="left h-screen sticky bottom-0 top-0 flex basis-2/5 justify-center items-center ">
+          <div className="child flex my-fs-30 font-bold wavy wavy-text">
             Selamat Berpuasa 
           </div>
           <span className="my-fs-30 font-bold pl-2"><MdNoFood /></span>
@@ -50,7 +52,7 @@ let Home = () => {
         </div>
         <div className="right flex">
         {/* item 1 */}
-            <div className="item1 flex">
+            <div className="item1 flex hvr-bob ">
               <div class="max-w-sm rounded-lg">
                   <img
                     class="rounded-lg"
@@ -71,7 +73,7 @@ let Home = () => {
             </div>
 
             {/* item 2 */}
-            <div className="item2 flex ml-2 mr-2">
+            <div className="item2 flex ml-2 mr-2 hvr-bob " >
             <div class="max-w-sm rounded-lg">
                   <img
                     class="rounded-lg"
@@ -92,7 +94,7 @@ let Home = () => {
             </div>
 
             {/* item 3 */}
-            <div className="item3 flex">
+            <div className="item3 flex hvr-bob ">
             <div class="max-w-sm rounded-lg">
                   <img
                     class="rounded-lg"
@@ -115,10 +117,12 @@ let Home = () => {
              {/* button */}
               <div className="flex ">
                 <div className="btn flex ml-2 mt-2">
-                        <button className='my-bg-dark px-3 py-3 flex my-light rounded-full font-semibold'>
+                        <button className='my-bg-light px-3 py-3 flex my-dark rounded-full font-semibold' style={{ border: '1px solid black' } }>
+                        <Link to='/register'>
                         Join now
+                        </Link>
                         </button>
-                        <button className='my-dark px-3 py-3 ml-2 flex rounded-full ' style={{ border: '1px solid black' } } >
+                        <button className='my-dark px-3 py-3 ml-2 flex rounded-full font-semibold ' style={{ border: '1px solid black' } } >
                         Learn more
                         </button>
                 </div>
@@ -202,27 +206,27 @@ let Home = () => {
 
                   {/* Socmed */}
                   <div className="socmed flex my-fs-30 px-3 my-3 border-b-2 pb-4 items-center">
-                    <div className="instagram ">
+                    <div className="instagram hvr-bob ">
                       <a href={socmed[0].url} target="_blank">
                         <BsInstagram />
                       </a>  
                     </div>
-                    <div className="linkedin px-4">
+                    <div className="linkedin px-4 hvr-bob">
                       <a href={socmed[1].url} target="_blank">
                         <BsLinkedin />
                       </a>  
                     </div>
-                    <div className="facebook">
+                    <div className="facebook hvr-bob">
                       <a href={socmed[2].url} target="_blank">
                         <BsFacebook />
                       </a>  
                     </div>
-                    <div className="github px-4 ">
+                    <div className="github px-4 hvr-bob">
                       <a href={socmed[3].url} target="_blank">
                         <BsGithub />
                       </a>
                     </div>
-                    <div className="twitter">
+                    <div className="twitter hvr-bob ">
                       <a href={socmed[4].url} target="_blank"> 
                         <BsTwitter /> 
                       </a>
