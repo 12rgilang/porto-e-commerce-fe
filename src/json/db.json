@@ -1,0 +1,731 @@
+{
+  "users": [
+    {
+      "username": "gilang",
+      "email": "gilang@gmail.com",
+      "password": "wakwaw123",
+      "id": 1
+    },
+    {
+      "username": "12rgilang",
+      "email": "wakwaw@gmail.com",
+      "password": "wakwaaaaaw",
+      "id": 2
+    },
+    {
+      "username": "sadsdaadsads",
+      "email": "asdasddsa",
+      "password": "adssdawd11221",
+      "id": 3
+    }
+  ],
+
+
+  "category" : ["Drinks", "Snack", "Food"],
+
+
+
+
+  "products": [
+    {
+      "id": 1,
+      "name": "Americano",
+      "category": 0,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 5,
+          "cup": "8 fl oz",
+          "price": 30000
+        },
+        {
+          "option": "Tall",
+          "calories": 10,
+          "cup": "12 fl oz",
+          "price": 35000
+        },
+        {
+          "option": "Grande",
+          "calories": 15,
+          "cup": "16 fl oz",
+          "price": 38000
+        }
+      ],
+      "topping": [
+        "Cinnamon Powder",
+        "Salted Caramel Foam",
+        "Chocolate Cream",
+        "Red and Green Sprinkle",
+        "Cinamon Dolce Sprinkle"
+      ],
+      "sugar": [
+        "Less",
+        "Normal",
+        "More"
+      ],
+      "image": "https://www.starbucksathome.com/id/sites/default/files/2021-03/3-CaffeAmericano_LongShadow_Cream_1.png"
+    },
+    {
+      "id": 2,
+      "name": "Cappucino",
+      "category": 0,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 70,
+          "cup": "8 fl oz",
+          "price": 37000
+        },
+        {
+          "option": "Tall",
+          "calories": 100,
+          "cup": "12 fl oz",
+          "price": 42000
+        },
+        {
+          "option": "Grande",
+          "calories": 140,
+          "cup": "16 fl oz",
+          "price": 47000
+        }
+      ],
+      "topping": [
+        "Cinnamon Powder",
+        "Salted Caramel Foam",
+        "Chocolate Cream",
+        "Red and Green Sprinkle",
+        "Cinamon Dolce Sprinkle"
+      ],
+      "sugar": [
+        "Less",
+        "Normal",
+        "More"
+      ],
+      "image": "https://www.starbucksathome.com/id/sites/default/files/styles/rdp_banner_image/public/2021-05/10032021_CAPPUCCINO_CS-min.png?itok=n_45xlrE"
+    },
+    {
+      "id": 3,
+      "name": "Flat White",
+      "category": 0,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 110,
+          "cup": "8 fl oz",
+          "price": 35000
+        },
+        {
+          "option": "Tall",
+          "calories": 140,
+          "cup": "12 fl oz",
+          "price": 40000
+        },
+        {
+          "option": "Grande",
+          "calories": 220,
+          "cup": "16 fl oz",
+          "price": 43000
+        }
+      ],
+      "topping": [
+        "Cinnamon Powder",
+        "Salted Caramel Foam",
+        "Chocolate Cream",
+        "Red and Green Sprinkle",
+        "Cinamon Dolce Sprinkle"
+      ],
+      "sugar": [
+        "Less",
+        "Normal",
+        "More"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/fedee22e49724cd09fbcc7ee2e567377.jpg?impolicy=1by1_wide_topcrop_630"
+    },
+    {
+      "id": 4,
+      "name": "Caramel Macchiato",
+      "category": 0,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 120,
+          "cup": "8 fl oz",
+          "price": 40000
+        },
+        {
+          "option": "Tall",
+          "calories": 190,
+          "cup": "12 fl oz",
+          "price": 43000
+        },
+        {
+          "option": "Grande",
+          "calories": 250,
+          "cup": "16 fl oz",
+          "price": 48000
+        }
+      ],
+      "topping": [
+        "Cinnamon Powder",
+        "Salted Caramel Foam",
+        "Chocolate Cream",
+        "Red and Green Sprinkle",
+        "Cinamon Dolce Sprinkle"
+      ],
+      "sugar": [
+        "Less",
+        "Normal",
+        "More"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/58db701349cb48738069e8c912e2b3ac.jpg?impolicy=1by1_wide_topcrop_630"
+    },
+    {
+      "id": 5,
+      "name": "Honey Citrus Mint Tea",
+      "category": 0,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 60,
+          "cup": "8 fl oz",
+          "price": 28000
+        },
+        {
+          "option": "Tall",
+          "calories": 80,
+          "cup": "12 fl oz",
+          "price": 30000
+        },
+        {
+          "option": "Grande",
+          "calories": 130,
+          "cup": "16 fl oz",
+          "price": 33000
+        }
+      ],
+      "topping": [
+        "Cinnamon Powder",
+        "Salted Caramel Foam",
+        "Chocolate Cream",
+        "Red and Green Sprinkle",
+        "Cinamon Dolce Sprinkle"
+      ],
+      "sugar": [
+        "Less",
+        "Normal",
+        "More"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/a5e64777b3cc412e9239b8a37328cb37.jpg?impolicy=1by1_wide_topcrop_630"
+    },
+    {
+      "id": 6,
+      "name": "Peppermint Hot Chocolate",
+      "category": 0,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 230,
+          "cup": "8 fl oz",
+          "price": 42000
+        },
+        {
+          "option": "Tall",
+          "calories": 330,
+          "cup": "12 fl oz",
+          "price": 48000
+        },
+        {
+          "option": "Grande",
+          "calories": 440,
+          "cup": "16 fl oz",
+          "price": 52000
+        }
+      ],
+      "topping": [
+        "Cinnamon Powder",
+        "Salted Caramel Foam",
+        "Chocolate Cream",
+        "Red and Green Sprinkle",
+        "Cinamon Dolce Sprinkle"
+      ],
+      "sugar": [
+        "Less",
+        "Normal",
+        "More"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/e974a448ae8d4c86afc50d86c1c39720.jpg?impolicy=1by1_wide_topcrop_630"
+    },
+    {
+      "id": 7,
+      "name": "Steamed Apple Juice",
+      "category": 0,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 120,
+          "cup": "8 fl oz",
+          "price": 30000
+        },
+        {
+          "option": "Tall",
+          "calories": 170,
+          "cup": "12 fl oz",
+          "price": 35000
+        },
+        {
+          "option": "Grande",
+          "calories": 220,
+          "cup": "16 fl oz",
+          "price": 40000
+        }
+      ],
+      "topping": [
+        "Cinnamon Powder",
+        "Salted Caramel Foam",
+        "Chocolate Cream",
+        "Red and Green Sprinkle",
+        "Cinamon Dolce Sprinkle"
+      ],
+      "sugar": [
+        "Less",
+        "Normal",
+        "More"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/a9e551eb323e4f0a93cf91b165916950.jpg?impolicy=1by1_wide_topcrop_630"
+    },
+    {
+      "id": 8,
+      "name": "Caramel Brulee Creme",
+      "category": 0,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 220,
+          "cup": "8 fl oz",
+          "price": 45000
+        },
+        {
+          "option": "Tall",
+          "calories": 320,
+          "cup": "12 fl oz",
+          "price": 48000
+        },
+        {
+          "option": "Grande",
+          "calories": 420,
+          "cup": "16 fl oz",
+          "price": 50000
+        }
+      ],
+      "topping": [
+        "Cinnamon Powder",
+        "Salted Caramel Foam",
+        "Chocolate Cream",
+        "Red and Green Sprinkle",
+        "Cinamon Dolce Sprinkle"
+      ],
+      "sugar": [
+        "Less",
+        "Normal",
+        "More"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/edf115bb3faf40debf710fe73cd85a84.jpg?impolicy=1by1_wide_topcrop_630"
+    },
+    {
+      "id": 9,
+      "name": "Cold Brew Coffee with Milk",
+      "category": 0,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 25,
+          "cup": "8 fl oz",
+          "price": 36000
+        },
+        {
+          "option": "Tall",
+          "calories": 35,
+          "cup": "12 fl oz",
+          "price": 40000
+        },
+        {
+          "option": "Grande",
+          "calories": 60,
+          "cup": "16 fl oz",
+          "price": 43000
+        }
+      ],
+      "topping": [
+        "Cinnamon Powder",
+        "Salted Caramel Foam",
+        "Chocolate Cream",
+        "Red and Green Sprinkle",
+        "Cinamon Dolce Sprinkle"
+      ],
+      "sugar": [
+        "Less",
+        "Normal",
+        "More"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/bcf41cb5ff8f455fa945428c8d05c3f2.jpg?impolicy=1by1_wide_topcrop_630"
+    },
+    {
+      "id": 10,
+      "name": "Iced Peach Green Tea Lemonade",
+      "category": 0,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 60,
+          "cup": "8 fl oz",
+          "price": 32000
+        },
+        {
+          "option": "Tall",
+          "calories": 80,
+          "cup": "12 fl oz",
+          "price": 36000
+        },
+        {
+          "option": "Grande",
+          "calories": 130,
+          "cup": "16 fl oz",
+          "price": 40000
+        }
+      ],
+      "topping": [
+        "Cinnamon Powder",
+        "Salted Caramel Foam",
+        "Chocolate Cream",
+        "Red and Green Sprinkle",
+        "Cinamon Dolce Sprinkle"
+      ],
+      "sugar": [
+        "Less",
+        "Normal",
+        "More"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/bebc2b416fb44f69a193be358ad8b3f8.jpg?impolicy=1by1_wide_topcrop_630"
+    },
+    {
+      "id": 11,
+      "name": "Sausage, Cheddar & Egg Sandwich",
+      "category": 2,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 5,
+          "cup": "8 fl oz",
+          "price": 30000
+        },
+        {
+          "option": "Tall",
+          "calories": 10,
+          "cup": "12 fl oz",
+          "price": 35000
+        },
+        {
+          "option": "Grande",
+          "calories": 15,
+          "cup": "16 fl oz",
+          "price": 38000
+        }
+      ],
+      "topping": [
+        "Cheese",
+        "Eggs",
+        "Meats",
+        "Sriracha"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/27bd607e92354742bc8cf46b23f4ce39.jpg?impolicy=1by1_medium_630"
+    },
+    {
+      "id": 12,
+      "name": "Impossible™ Breakfast Sandwich",
+      "category": 2,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 70,
+          "cup": "8 fl oz",
+          "price": 37000
+        },
+        {
+          "option": "Tall",
+          "calories": 100,
+          "cup": "12 fl oz",
+          "price": 42000
+        },
+        {
+          "option": "Grande",
+          "calories": 140,
+          "cup": "16 fl oz",
+          "price": 47000
+        }
+      ],
+      "topping": [
+        "Cheese",
+        "Eggs",
+        "Meats",
+        "Sriracha"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/f9a4cd143c4342abbb4f60b7fab4e6df.jpg?impolicy=1by1_medium_630"
+    },
+    {
+      "id": 13,
+      "name": "Bacon, Gouda & Egg Sandwich",
+      "category": 2,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 110,
+          "cup": "8 fl oz",
+          "price": 35000
+        },
+        {
+          "option": "Tall",
+          "calories": 140,
+          "cup": "12 fl oz",
+          "price": 40000
+        },
+        {
+          "option": "Grande",
+          "calories": 220,
+          "cup": "16 fl oz",
+          "price": 43000
+        }
+      ],
+      "topping": [
+        "Cheese",
+        "Eggs",
+        "Meats",
+        "Sriracha"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/4bac572a156f4b5e90704c516b732a75.jpg?impolicy=1by1_medium_630"
+    },
+    {
+      "id": 14,
+      "name": "Spinach, Feta & Egg White Wrap",
+      "category": 2,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 120,
+          "cup": "8 fl oz",
+          "price": 40000
+        },
+        {
+          "option": "Tall",
+          "calories": 190,
+          "cup": "12 fl oz",
+          "price": 43000
+        },
+        {
+          "option": "Grande",
+          "calories": 250,
+          "cup": "16 fl oz",
+          "price": 48000
+        }
+      ],
+      "topping": [
+        "Cheese",
+        "Eggs",
+        "Meats",
+        "Sriracha"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/e4583a7fdc89458983fdacb248debb10.jpg?impolicy=1by1_medium_630"
+    },
+    {
+      "id": 15,
+      "name": "Cinnamon Raisin Bagel",
+      "category": 2,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 60,
+          "cup": "8 fl oz",
+          "price": 28000
+        },
+        {
+          "option": "Tall",
+          "calories": 80,
+          "cup": "12 fl oz",
+          "price": 30000
+        },
+        {
+          "option": "Grande",
+          "calories": 130,
+          "cup": "16 fl oz",
+          "price": 33000
+        }
+      ],
+      "topping": [
+        "Cheese",
+        "Eggs",
+        "Meats",
+        "Sriracha"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/b4bce2e2d28141e79b64f9e2de4a789c.jpg?impolicy=1by1_medium_630"
+    },
+    {
+      "id": 16,
+      "name": "Avocado Spread",
+      "category": 2,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 230,
+          "cup": "8 fl oz",
+          "price": 42000
+        },
+        {
+          "option": "Tall",
+          "calories": 330,
+          "cup": "12 fl oz",
+          "price": 48000
+        },
+        {
+          "option": "Grande",
+          "calories": 440,
+          "cup": "16 fl oz",
+          "price": 52000
+        }
+      ],
+      "topping": [
+        "Cheese",
+        "Eggs",
+        "Meats",
+        "Sriracha"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/3d32d9ac0991482596873baa3f649211.jpg?impolicy=1by1_medium_630"
+    },
+    {
+      "id": 17,
+      "name": "Cranberry Bliss® Bar",
+      "category": 2,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 120,
+          "cup": "8 fl oz",
+          "price": 30000
+        },
+        {
+          "option": "Tall",
+          "calories": 170,
+          "cup": "12 fl oz",
+          "price": 35000
+        },
+        {
+          "option": "Grande",
+          "calories": 220,
+          "cup": "16 fl oz",
+          "price": 40000
+        }
+      ],
+      "topping": [
+        "Cheese",
+        "Eggs",
+        "Meats",
+        "Sriracha"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/43a95b66e03e48cfa130ce16323eb644.jpg?impolicy=1by1_medium_630"
+    },
+    {
+      "id": 18,
+      "name": "Chocolate Croissant",
+      "category": 2,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 220,
+          "cup": "8 fl oz",
+          "price": 45000
+        },
+        {
+          "option": "Tall",
+          "calories": 320,
+          "cup": "12 fl oz",
+          "price": 48000
+        },
+        {
+          "option": "Grande",
+          "calories": 420,
+          "cup": "16 fl oz",
+          "price": 50000
+        }
+      ],
+      "topping": [
+        "Cheese",
+        "Eggs",
+        "Meats",
+        "Sriracha"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/11a5dc6219434a4cbf81b195c14a393e.jpg?impolicy=1by1_medium_630"
+    },
+    {
+      "id": 19,
+      "name": "Pumpkin Cream Cheese Muffin",
+      "category": 2,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 25,
+          "cup": "8 fl oz",
+          "price": 36000
+        },
+        {
+          "option": "Tall",
+          "calories": 35,
+          "cup": "12 fl oz",
+          "price": 40000
+        },
+        {
+          "option": "Grande",
+          "calories": 60,
+          "cup": "16 fl oz",
+          "price": 43000
+        }
+      ],
+      "topping": [
+        "Cheese",
+        "Eggs",
+        "Meats",
+        "Sriracha"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/e1a4f06b1e9c42f9833ea81409119eb9.jpg?impolicy=1by1_medium_630"
+    },
+    {
+      "id": 20,
+      "name": "Rolled & Steel-Cut Oatmeal",
+      "category": 2,
+      "size": [
+        {
+          "option": "Short",
+          "calories": 60,
+          "cup": "8 fl oz",
+          "price": 32000
+        },
+        {
+          "option": "Tall",
+          "calories": 80,
+          "cup": "12 fl oz",
+          "price": 36000
+        },
+        {
+          "option": "Grande",
+          "calories": 130,
+          "cup": "16 fl oz",
+          "price": 40000
+        }
+      ],
+      "topping": [
+        "Cheese",
+        "Eggs",
+        "Meats",
+        "Sriracha"
+      ],
+      "image": "https://globalassets.starbucks.com/assets/0612427b8d134a098b6f7457fdac44d2.jpg?impolicy=1by1_medium_630"
+    }
+  ]
+}
