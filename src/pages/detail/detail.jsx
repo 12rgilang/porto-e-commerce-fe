@@ -18,10 +18,9 @@ let DetailProduct = () => {
     let onGetData = async() => {
         try {
             let response = await axios.get(`https://my-json-server.typicode.com/12rgilang/jsonserver-deployment-trial/products/${productId.id}`)
-            console.log(productId)
             setData(response.data)
         } catch (error) {
-            
+            console.log(error.message)
         }
     }
 
@@ -31,23 +30,34 @@ let DetailProduct = () => {
         setSizeToShow(indexSelectedSize)
     }
 
+    let onSelectTopping = () => {
+        let indexSelectedTopping = selectTopping.current.value
+        console.log(indexSelectedTopping)
+    }
+
+    let onSelectSugar = () => {
+        let indexSelectedSugar = selectSugar.current.value
+        console.log(indexSelectedSugar)
+    }
+
     let onAddOrder = async() =>{
         try {
             let dataToSend = {
-                idProduct: data.id,
+                idProduct: productId.id,
                 indexSize: parseInt(selectSize.current.value),
                 indexTopping: parseInt(selectTopping.current.value),
                 indexSugar: parseInt(selectSugar.current.value),
                 quantity: 1,
                 userId: parseInt(localStorage.getItem('token'))
             }
-            let checkExist = await axios.get(`https://my-json-server.typicode.com/12rgilang/jsonserver-deployment-trial/cart?idProduct=${data.id}`)
+            let checkExist = await axios.get(`https://my-json-server.typicode.com/12rgilang/jsonserver-deployment-trial/cart?idProduct=${productId.id}`)
 
             if(checkExist.data.length === 0){
                 let response = await axios.post(`https://my-json-server.typicode.com/12rgilang/jsonserver-deployment-trial/cart`, dataToSend)
+                console.log(response)
             }else{
                 let newQuantity = checkExist.data[0].quantity + 1
-                let update = await axios.patch(`https://my-json-server.typicode.com/12rgilang/jsonserver-deployment-trial/cart/${checkExist.data[0].id}`, {quantitiy: newQuantity})
+                let update = await axios.patch(`https://my-json-server.typicode.com/12rgilang/jsonserver-deployment-trial/cart/${checkExist.data[0].id}`, {quantity: newQuantity})
                 console.log(update)
             }
         } catch (error) {
@@ -81,8 +91,8 @@ let DetailProduct = () => {
            <div className="desc flex basis-3/5 justify-center">
                <div className="flex-col">
                 <p className="my-fs-30 font-bold">{data.name}</p>
-                <p className="my-ligh my-fs-20 font-semi-bold"> {data.size[sizeToShow].calories} Calories</p>
-                <p className="my-ligh my-fs-20 font-semi-bold">Rp. {(data.size[sizeToShow].price).toLocaleString()}</p>
+                <p className="my-light my-fs-20 font-semi-bold"> {data.size[sizeToShow].calories} Calories</p>
+                <p className="my-light my-fs-20 font-semi-bold">Rp. {(data.size[sizeToShow].price).toLocaleString()}</p>
                </div>
            </div>
         </div>
@@ -95,7 +105,7 @@ let DetailProduct = () => {
                 Size options
                 </div>
                 <div className="option block flex my-fs-15 border-2 mt-1 items-center">
-                <select ref={selectSize} onChange={onSelectSize} className="flex grow">
+                <select ref={selectSize} onChange={onSelectSize} className="flex grow border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     {
                         data.size.map((value, index) => {
                             return(
@@ -112,11 +122,11 @@ let DetailProduct = () => {
                     Topping
                     </div>
                     <div className="option block flex my-fs-15 border-2 mt-1 items-center">
-                    <select className="flex grow">
+                    <select ref={selectTopping} onChange={onSelectTopping} className="flex grow border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         {
                             data.topping.map((value, index) => {
                                 return(
-                                    <option key={index} value={value}>{value}</option>)
+                                    <option key={index} value={index}>{value}</option>)
                                 })
                         }
                     </select>
@@ -127,7 +137,7 @@ let DetailProduct = () => {
                         <h1 className="my-fs-25 font-bold pb-2 mt-3" style={{ borderBottom: '3px solid silver' }}>
                         Sugar
                         </h1>
-                        <select  id="countries" className="mt-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <select ref={selectSugar} onChange={onSelectSugar} className="mt-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                             {data.sugar.map((value, index) => {
                                 return(
                                     <option value={index}>{value}</option>

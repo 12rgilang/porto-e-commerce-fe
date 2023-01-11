@@ -1,9 +1,12 @@
 import { MdNoFood } from "react-icons/md";
 import { BsCaretDown, BsInstagram, BsGithub, BsLinkedin, BsFacebook, BsTwitter } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import './../home/home.css'
 // import { RxInstagramLogo } from "react-icons/rx";
 
+
+const phrases = ["Winter Is Coming", "Coffee Ready", "Frappe freezing"];
 
 let Home = () => {
   let img = [
@@ -21,22 +24,40 @@ let Home = () => {
     { name : "github", "url": "https://github.com/12rgilang"},
     { name: "twitter", "url": "https://twitter.com/G_R12/status/1574050538693758976"},
   ]
-
   ;
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentPhrase, setCurrentPhrase] = useState(phrases[0])
+  const [index, setIndex] = useState(1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPhrase(phrases[index]);
+      if(index === phrases.length -1){
+        setIndex(0);
+      }else {
+        setIndex(index +1)
+      }
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, [index])
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
     <>
       <div className="parent flex">
           {/* left section */}
-        <div className="left h-screen sticky bottom-0 top-0 flex basis-2/5 justify-center items-center ">
-          <div className="child flex my-fs-30 font-bold wavy wavy-text">
-            Selamat Berpuasa 
+        <div className="left hidden md:h-screen md:sticky md:bottom-0 md:top-0 md:flex md:basis-2/5 justify-center items-center ">
+          <div className="child flex my-fs-30 font-bold wavy wavy-text animated-texts">
+            {currentPhrase}
           </div>
-          <span className="my-fs-30 font-bold pl-2"><MdNoFood /></span>
         </div>
 
         {/* right section */}
         {/* section 1 */}
-        <div className="parent-right basis-3/5 border-x-4 space-x-8">
+        <div className="parent-right md:basis-3/5 border-x-4 space-x-8">
           {/* button righ bottom */}
         <div className="flex justify-end">
           <div className="flex m-3 fixed bottom-2">
@@ -115,14 +136,14 @@ let Home = () => {
             </div>
             </div>
              {/* button */}
-              <div className="flex ">
-                <div className="btn flex ml-2 mt-2">
-                        <button className='my-bg-light px-3 py-3 flex my-dark rounded-full font-semibold' style={{ border: '1px solid black' } }>
+              <div className="flex justify-end md:justify-start">
+                <div className="btn flex ml-2 mt-2 ">
+                        <button className='my-bg-main px-3 py-3 flex my-dark rounded-full font-semibold hover:opacity-75 ' style={{ border: '1px solid black' } }>
                         <Link to='/register'>
                         Join now
                         </Link>
                         </button>
-                        <button className='my-dark px-3 py-3 ml-2 flex rounded-full font-semibold ' style={{ border: '1px solid black' } } >
+                        <button className='my-dark px-3 py-3 ml-2 flex rounded-full font-semibold hover:opacity-75' style={{ border: '1px solid black' } } >
                         Learn more
                         </button>
                 </div>
@@ -193,15 +214,47 @@ let Home = () => {
 
                   {/* Section 3 */}
                   {/* Dropdown */}
-                <div className="px-3 my-4 font-semibold my-fs-20 max-w-full ml-0 flex-col">
-                  <div className="about-us flex justify-between items-center">
-                    <div className="">About us</div> <span className="pr-4"><BsCaretDown /></span>
+                <div className="px-3 my-4 font-semibold my-fs-20 ml-0 flex-col">
+                  <div className="about-us">
+                    <button className="flex items-center justify-between w-11/12 inline-block py-2.5  active:shadow-lg transition duration-150 ease-in-out" type="button" data-bs-toggle="collapse" data-bs-target="#aboutUs" aria-expanded="false" aria-controls="aboutUs">
+                      About us
+                      <span className="pr-4"><BsCaretDown /></span>
+                    </button>
+                    <div className="collapse" id="aboutUs">
+                      <div className="block p-6 rounded-lg shadow-lg bg-white">
+                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                      </div>
+                    </div>
+                  </div> 
+                  <div className="careers my-5">
+                    <button className="flex items-center justify-between w-11/12 inline-block py-2.5 active:shadow-lg transition duration-150 ease-in-out" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#careers"
+                    aria-expanded="false"
+                    aria-controls="careers">
+                      Careers
+                      <span className="pr-4"><BsCaretDown /></span>
+                    </button> 
+                    <div className="collapse" id="careers">
+                      <div className="block p-6 rounded-lg shadow-lg bg-white">
+                      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                      </div>
+                    </div>
                   </div>
-                  <div className="careers flex mt-5 mb-5 justify-between items-center">
-                    <div className="">Careers</div> <span className="pr-4"><BsCaretDown /></span>
-                  </div>
-                  <div className="social-impact flex justify-between items-center pb-4 border-b-2">
-                    <div className="">Social Impact</div> <span className="pr-4"><BsCaretDown /></span>
+                  <div className="social-impact pb-4 border-b-2">
+                    <button className="flex items-center justify-between w-11/12 inlin-block py-2.5 active:shadow-lg transition duration-150 ease-in-out" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#social-impact"
+                    aria-expanded="false"
+                    aria-controls="social-impact" >
+                      Social Impact
+                      <span className="pr-4"><BsCaretDown /></span>
+                    </button> 
+                    <div className="collapse" id="social-impact">
+                      <div className="block p-6 rounded-lg shadow-lg bg-white">
+                      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                      </div>
+                    </div>
                   </div>
 
                   {/* Socmed */}

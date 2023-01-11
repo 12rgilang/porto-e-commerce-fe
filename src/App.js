@@ -22,6 +22,7 @@ import { async } from '@firebase/util';
 import Cart from './pages/cart/cart';
 import NotFound from './pages/notfound/404';
 
+
 const provider = new GoogleAuthProvider();
 
 export default function App(){
@@ -114,7 +115,7 @@ let onLogout = async() => {
       setUsername('')
       setRedirect(false) // jadi ketika ke trigger clik button logout maka redirect akan false
   } catch (error) {
-    
+    toast.error(error.message)
   }
   
   

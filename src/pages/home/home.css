@@ -1,4 +1,4 @@
-.wavy-text {
+/* .wavy-text {
   font-size: 36px;
   font-weight: bold;
   text-shadow:
@@ -23,7 +23,7 @@
       -6px -6px 0 #FDD037,
       -8px -8px 0 #000;
   }
-}
+} */
 
 .wavy-text {
   font-size: 36px;
@@ -110,6 +110,19 @@ a:visited{
   -webkit-animation-direction: normal, alternate;
   animation-direction: normal, alternate;
 }
+
+/* .animated-text {
+  animation: change-text 2s infinite;
+}
+
+@keyframes change-text {
+  0% { content: "Winter Is Coming"; }
+  25% { content: "Coffee Ready"; }
+  50% { content: "Frappe freezing"; }
+  75% { content: "Winter Is Coming"; }
+  100% { content: "Coffee Ready"; }
+}
+ */
 
 /* footer */
 .instagram > a{

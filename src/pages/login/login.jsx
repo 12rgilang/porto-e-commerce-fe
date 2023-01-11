@@ -36,22 +36,21 @@ let Login = (props) => {
                 Sign in
             </h1>
         
-            <div className="cards mt-10 px-20 py-10 w-2/5 rounded-md flex flex-column justify-around">
-                <p className='mb-3'>
+            <div className="cards mt-10 px-20 py-10 md:mt-10 md:px-20 md:py-10 md:w-fit rounded-md flex flex-column justify-around">
+                <p className='my-3'>
                     *indicates required field
                 </p>
-                <input ref={username} type="text" placeholder='Username or email address' className='py-2 px-2 w-100 rounded-md' style={{border: '1px solid black'}} />
+                <input ref={username} type="text" placeholder='Username or email address' className='py-2 px-2 w-100 rounded-md' style={{border: '1px solid black'}} required/>
                 <input ref={password} type="password" placeholder='Password' className='py-2 px-2 w-100 rounded-md mt-4 mb-3 flex-nowrap' style={{border: '1px solid black'}} />
                 
                 <div className='flex'>
-                <input type="checkbox" className="mr-1" />Keep me sign in.<a href='#' className='items-center'> Details</a>
+                <input type="checkbox" className="mr-1" />Keep me sign in. <a href='#' className='items-center pl-1 underline'>Details</a>
                 </div>
                 
-                <a href='#' className='my-fs-15 font-bold mt-2 mb-3 my-main' >Forgot yout username ?</a>
-                <a href='#' className='my-fs-15 font-bold my-main' >Forgot yout password ?</a>
-                <div className="parent-button flex justify-end">
-                    <button onClick={() => props.myFunc.onLogin(username.current.value, password.current.value)} className='my-bg-main w-25 my-light px-2 py-3 mt-3 mt-3 rounded-full self-y
-                    end'>
+                <a href='#' className='my-fs-15 font-bold mt-2 mb-3 my-main' >Forgot your username ?</a>
+                <a  className='my-fs-15 font-bold my-main' >Forgot your password ?</a>
+                <div className="parent-button flex justify-end mb-4">
+                    <button onClick={() => props.myFunc.onLogin(username.current.value, password.current.value)} className='my-bg-main px-3 py-3 md:w-25 my-light md:px-2 md:py-3 md:mt-3 rounded-full self-end'>
                         Sign in
                     </button>
                     <button onClick={() => props.myGoogle.onLoginWithGoogle()} className='my-bg-main w-content my-light px-2 py-3 mt-3 ml-3 rounded-full self-end'>

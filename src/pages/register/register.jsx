@@ -8,14 +8,12 @@ import toast, { Toaster } from 'react-hot-toast'
 export default function Register(props){
     const [disabledButton, setDisabledButton] = useState(false)
     const [message, setMessage] = useState('')
+    const [isRegister, setIsRegister] = useState(false)
 
     const username = useRef()
     const email = useRef()
     const password = useRef()
 
-    if(props.isRedirect.redirect){
-        return <Navigate to='/' />
-    }
 
         // urutan pertama untuk membuat  function onsubmit
     let onSubmit = async() => {
@@ -49,6 +47,9 @@ export default function Register(props){
                 email.current.value = ''
                 toast.success('Register Succesfull') // ini memunculkan alert menggunakan npm toast
                 setMessage('') // seteleah input pendaftaran selesai maka pemberitahuan akan kembali kosong
+                setTimeout(() =>{
+                    setIsRegister(true)
+                }, 2500)
             }else{
                 throw { message: 'Email/username already register'}
             }
@@ -60,6 +61,9 @@ export default function Register(props){
         }
     }
 
+    if(isRegister){
+        return <Navigate to='/login' />
+    }
 
     return(
         <div  className="flex flex-col items-center py-20">
@@ -67,13 +71,13 @@ export default function Register(props){
                 Create an account
             </h1>
             <h1 className="my-fs-15 my-grey mt-5 font-bold">
-                PURWADHIKA® REWARDS
+                MY® REWARDS
             </h1>
             <p className="my-grey mt-3" style={{maxWidth: '600px', textAlign: 'center'}}>
-                Join Purwadhika Rewards to earn Stars for free food and drinks, any way you pay. Get access to mobile ordering, a birthday Reward, and moremore.
+                Join MY Rewards to earn Stars for free food and drinks, any way you pay. Get access to mobile ordering, a birthday Reward, and more.
             </p>
 
-            <div className="cards mt-20 px-20 py-10 w-2/5 rounded-md flex flex-column">
+            <div className="cards mt-20 px-20 py-10 w-11/12 md:mt-20 md:px-20 md:py-10 md:w-1/2 rounded-md flex flex-column">
                 <p className='font-bold'>
                     * indicates required field
                 </p>
@@ -89,7 +93,7 @@ export default function Register(props){
                 <div className='pt-2 text-red-500'>
                     {message}
                 </div>
-                <button disabled={disabledButton} onClick={onSubmit} className='my-bg-main w-25 my-light px-2 py-3 mt-3 rounded-full self-end'>
+                <button disabled={disabledButton} onClick={onSubmit} className='my-bg-main w-100 my-light px-2 py-3 mt-3 rounded-full self-end'>
                     {disabledButton? 'Loading' : 'Sign Up'}
                 </button>
             </div>

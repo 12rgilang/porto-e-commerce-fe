@@ -8,7 +8,9 @@ let Menu = () =>{
     const [ data, setData ] = useState([])
     // const [ backupData, setBackupData ] = useState([])  // backup data ini untuk csr clientside rendering
     const [category, setCategory] = useState([])
+
     const [selectedMenu, setSelectedMenu] = useState(0)
+    const [disabledButton, setDisabledButton] = useState(false)
 
     useEffect(() => {
         onGetData()
@@ -49,30 +51,32 @@ let Menu = () =>{
             setData(response.data)
             setCategory(responseCategory.data)
         } catch (error) {
-            
+            console.log(error)
         }
     }
 
     let onFilter = async(idx) => {
+        setDisabledButton(true)
         let response = await axios.get(`https://my-json-server.typicode.com/12rgilang/jsonserver-deployment-trial/products?category=${idx}`)
 
         setData(response.data)
-        setSelectedMenu(idx) //
+        setSelectedMenu(idx)
+        setDisabledButton(false)
     }
 
     return(
         <>
-         <div className="flex px-20 pt-20">
-            <div className="basis-1/6">
+         <div className="flex-col px-10 pt-20 md:px-20 md:pt-20">
+            <div className="basis-1/6 my-4">
                 <div>
-                    <h1 className="my-fs-25 font-bold">
+                    <h1 className="my-fs-25 mb-3 font-bold">
                         {category[selectedMenu]}
                     </h1>
                 </div>
                 {
                 category.map((value, index) => {
                     return(
-                        <div key={index} onClick={() => onFilter(index)} className="pt-2">{value}</div>
+                        <button key={index} onClick={() => onFilter(index)} className=" flex-col border rounded-full mx-3 md:mx-3 pt-2 px-3 md:px-5 py-3 md:py-5 focus:opacity-50 " disabled={disabledButton}> {disabledButton ? 'loading' : value }</button>
                     )
                         })
                 }
@@ -94,7 +98,7 @@ let Menu = () =>{
                         data.length?
                         data.map((value, index) => {
                             return(
-                                <div key={index} className='flex items-center mt-3'>
+                                <div key={index} className='flex-wrap sm:flex items-center mt-3 rounded-full'>
                                     <div>
                                         <Link to={`/product/${value.id}`}>
                                             <img src={value.image} style={{ width:'100px', height:'100px' }} className='rounded-full' />
@@ -109,7 +113,7 @@ let Menu = () =>{
                             )
                         })
                         :
-                            "Product DUARRRRR"
+                            "Coming Soon"
                     }
                 </div>
             </div>
